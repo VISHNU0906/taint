@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test / coverage / cache
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Generated benchmark artifacts (regenerate with `taint gen` / `taint eval`).
+# The bulky raw traces are regenerable, so they're ignored; the small sample
+# metrics.json is tracked so a fresh clone ships a real, lived-in eval result.
+data/traces/*.jsonl
+results/*.json
+!results/metrics.json
+
+# Keep the directories themselves
+!data/traces/.gitkeep
+!results/.gitkeep
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

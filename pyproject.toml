@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taint"
+version = "0.5.0"
+description = "Prompt-injection provenance detection: flag when an LLM/agent obeyed untrusted injected content instead of the trusted instruction (defensive, offline)."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Vishnu Kosuri" }]
+requires-python = ">=3.11"
+keywords = [
+    "prompt-injection",
+    "ai-safety",
+    "agent-security",
+    "provenance",
+    "llm-security",
+    "defensive",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.26",
+    "scikit-learn>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.urls]
+Homepage = "https://github.com/vishnukosuri/taint"
+
+[project.scripts]
+taint = "taint.cli:main"
+
+[tool.setuptools]
+packages = ["taint"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
