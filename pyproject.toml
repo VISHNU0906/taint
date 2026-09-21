@@ -35,7 +35,7 @@ dependencies = [
 dev = ["pytest>=7.4"]
 
 [project.urls]
-Homepage = "https://github.com/vishnukosuri/taint"
+Homepage = "https://github.com/VISHNU0906/taint"
 
 [project.scripts]
 taint = "taint.cli:main"
